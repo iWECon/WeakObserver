@@ -14,9 +14,8 @@ class Controller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // No need to call `Notification.default.removeObserver(_:)`
-        keyboardWeakObserver = NotificationWeakObserver(self, name: UIResponder.WillChangeFrameNotification) { (notify) in 
+        keyboardWeakObserver = NotificationWeakObserver(self, name: UIResponder.keyboardWillChangeFrameNotification) { (notify) in 
             // do something
         }
     }
